@@ -158,7 +158,7 @@ void MiniSpanTree_PRIM(MGraph G, VertexType u)
 		closedge[k].lowcost = 0;	//第k顶点并入U集
 		for (j = 0; j < G.vexnum; j++) {
 			if (G.arcs[k][j].adj < closedge[j].lowcost) {	//新顶点并入U后重新选择最小边
-				closedge[j].adjvex = G.vexs[k];
+				closedge[j].adjvex = G.vexs[k];// 是不是不应该有这一行？
 				closedge[j].lowcost = G.arcs[k][j].adj;
 			}
 		}
